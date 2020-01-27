@@ -1,7 +1,7 @@
 
 /boot		emmc	/dev/block/bootdevice/by-name/BOOT
 /recovery	emmc	/dev/block/bootdevice/by-name/RECOVERY	flags=backup=1
-/system		ext4	/dev/block/bootdevice/by-name/SYSTEM
+/system		ext4	/dev/block/bootdevice/by-name/SYSTEM	flags=backup=1
 /data		ext4	/dev/block/bootdevice/by-name/USERDATA	flags=encryptable=footer;length=-16384
 /cache		ext4	/dev/block/bootdevice/by-name/CACHE
 /preload    ext4    /dev/block/bootdevice/by-name/HIDDEN
@@ -14,10 +14,6 @@
 /usb-otg	vfat	/dev/block/sda1 /dev/block/sda		flags=display="USB-OTG";storage;wipeingui;removable
 /misc		emmc	/dev/block/bootdevice/by-name/OTA
 
-
-
 /m9kefs1         emmc   /dev/block/mmcblk0p5 flags=backup=1;display=m9kefs1
 /m9kefs2         emmc   /dev/block/mmcblk0p6 flags=backup=1;subpartitionof=/m9kefs2
 /m9kefs3         emmc   /dev/block/mmcblk0p7 flags=backup=1;subpartitionof=/m9kefs3
-
-
